@@ -64,15 +64,16 @@ def evaluate(ast):
     if type(ast) != tuple:
         return ast
     elif len(ast) == 3:
-        val1, op, val2 = ast
+        expr1, op, expr2 = ast
+        val1, val2 = evaluate(expr1), evaluate(expr2) 
         if op == '+':
-            return evaluate(val1) + evaluate(val2)
+            return val1 + val2
         elif op == '-':
-            return evaluate(val1) - evaluate(val2)
+            return val1 - val2
         elif op == '*':
-            return evaluate(val1) * evaluate(val2)
+            return val1 * val2
         elif op == '/':
-            return evaluate(val1) / evaluate(val2)
+            return val1 / val2
 
 
 
