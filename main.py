@@ -52,13 +52,15 @@ def evaluate(ast):
     3
     >>> evaluate((1, '+', (2, '+', 3)))
     6
+    >>> evaluate(((1, '+', 2), '+', 3))
+    6
     """
     if type(ast) != tuple:
         return ast
     elif len(ast) == 3:
         val1, op, val2 = ast
         if op == '+':
-            return val1 + evaluate(val2)
+            return evaluate(val1) + evaluate(val2)
 
 
 
