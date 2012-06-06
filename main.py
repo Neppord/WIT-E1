@@ -54,6 +54,8 @@ def evaluate(ast):
     -1
     >>> evaluate((1, '*', 2))
     2
+    >>> evaluate((1., '/', 2))
+    0.5
     >>> evaluate((1, '+', (2, '+', 3)))
     6
     >>> evaluate(((1, '+', 2), '+', 3))
@@ -69,6 +71,8 @@ def evaluate(ast):
             return evaluate(val1) - evaluate(val2)
         elif op == '*':
             return evaluate(val1) * evaluate(val2)
+        elif op == '/':
+            return evaluate(val1) / evaluate(val2)
 
 
 
