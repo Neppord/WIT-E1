@@ -48,8 +48,16 @@ def evaluate(ast):
     1
     >>> evaluate(2)
     2
+    >>> evaluate((1, '+', 2))
+    3
     """
-    return ast
+    if type(ast) != tuple:
+        return ast
+    elif len(ast) == 3:
+        val1, op, val2 = ast
+        if op == '+':
+            return val1 + val2
+
 
 
 
