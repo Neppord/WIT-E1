@@ -27,11 +27,15 @@ def ast_builder(tokens):
     2
     >>> ast_builder([1, '+', 2])
     (1, '+', 2)
+    >>> ast_builder([1, '+', 2, '*', 3])
+    (1, '+', (2, '*', 3))
     """
-    if len(tokens) > 1:
+    if len(tokens) == 3:
         return tuple(tokens[:3])
-    else:
+    elif len(tokens) == 1:
         return tokens[0]
+    else:
+        return tuple(tokens[:2] + [ast_builder(tokens[2:])])
 
 
 
