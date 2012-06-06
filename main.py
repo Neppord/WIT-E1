@@ -18,3 +18,10 @@ def lexer(string):
         else:
             ret.append(token)
     return ret
+
+def ast_builder(tokens):
+    """
+    >>> ast_builder([1])
+    1
+    """
+    return 1
