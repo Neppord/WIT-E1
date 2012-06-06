@@ -52,6 +52,8 @@ def evaluate(ast):
     3
     >>> evaluate((1, '-', 2))
     -1
+    >>> evaluate((1, '*', 2))
+    2
     >>> evaluate((1, '+', (2, '+', 3)))
     6
     >>> evaluate(((1, '+', 2), '+', 3))
@@ -63,8 +65,10 @@ def evaluate(ast):
         val1, op, val2 = ast
         if op == '+':
             return evaluate(val1) + evaluate(val2)
-        if op == '-':
+        elif op == '-':
             return evaluate(val1) - evaluate(val2)
+        elif op == '*':
+            return evaluate(val1) * evaluate(val2)
 
 
 
