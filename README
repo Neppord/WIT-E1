@@ -1,0 +1,52 @@
+Episode 1 Introduction to TDD and parsing
+
+This is part of the WIT vblog
+    by: Samuel (Neppord) Ytterbrink
+
+Assignment:
+    Write a Simple calculator with +, -, /, *. It will take the string
+    as arguments from the commandline but as interface to the test we will make
+    small helper functions (as you should) to keep the units as small as
+    possible. Here is a small list that can help in the development of the app:
+
+        1) Start buy implementing the Lexer.
+            We will only except whitespace seperated literals and operators
+        2) Write a small AST builder.
+            Its should translat the tokens to a tree structure where each node
+            is one calculation unit. The left and the right is subtrees and the
+            node data is the operator. If the node is a leeaf its a value node
+            and the value should be returnd as is.
+        3) Write a evaluator. It traverses the tree and calculates the nodes.
+            If this was a compiler we would instead write the code to calculate
+            the expression instead of acutaly evaluate it.
+        4) Write the main function that runs the programs directing the input
+            through the process.
+
+    Try to avoid complex data structures and use values when you can.
+
+LICENSE:
+http://www.opensource.org/licenses/BSD-2-Clause
+
+Copyright (c) 2012, SAMUEL YTTERBRINK
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+    
+    Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
