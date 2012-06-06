@@ -23,5 +23,20 @@ def ast_builder(tokens):
     """
     >>> ast_builder([1])
     1
+    >>> ast_builder([2])
+    2
     """
-    return 1
+    return tokens[0]
+
+
+
+
+
+
+
+
+
+
+
+
+
