@@ -2,5 +2,7 @@ def lexer(string):
     """
     >>> lexer('1')
     1
+    >>> lexer('2')
+    2
     """
-    return 1
+    return int(string)
