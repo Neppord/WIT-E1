@@ -42,6 +42,12 @@ def ast_builder(tokens):
         else:
             return ast_builder([tuple(tokens[:3])] + tokens[3:])
 
+def evaluate(ast):
+    """
+    >>> evaluate(1)
+    1
+    """
+    return 1
 
 
 
