@@ -46,8 +46,10 @@ def evaluate(ast):
     """
     >>> evaluate(1)
     1
+    >>> evaluate(2)
+    2
     """
-    return 1
+    return ast
 
 
 
