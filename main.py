@@ -75,15 +75,11 @@ def evaluate(ast):
         elif op == '/':
             return val1 / val2
 
+def main(argv):
+    tokens = lexer(" ".join(argv))
+    ast = ast_builder(tokens)
+    print evaluate(ast)
 
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    import sys
+    main(sys.argv[1:])
